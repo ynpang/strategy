@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OrderServiceV2Impl implements IOrderService{
+public class OrderServiceV2Impl implements IOrderService {
 
     @Autowired
     private HandlerContext handlerContext;
@@ -17,4 +17,5 @@ public class OrderServiceV2Impl implements IOrderService{
         AbstractHandler handler = handlerContext.getInstance(dto.getType());
         return handler.handle(dto);
     }
+
 }
