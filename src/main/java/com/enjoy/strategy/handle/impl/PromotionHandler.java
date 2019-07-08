@@ -6,7 +6,7 @@ import com.enjoy.strategy.handle.HandlerType;
 import org.springframework.stereotype.Component;
 
 @Component
-@HandlerType("1")
+@HandlerType("3")
 public class PromotionHandler extends AbstractHandler {
 
     public String handle(OrderDTO dto) {
