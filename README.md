@@ -42,8 +42,8 @@ public class NormalHandler extends AbstractHandler {
 3、以上面的map作为构造函数参数，初始化HandlerContext，将其注册到spring容器中；
 
 我们将核心的功能封装在HandlerProcessor类中，完成上面的功能。
-
 HandlerProcessor：
+
 @Component
 @SuppressWarnings("unchecked")
 public class HandlerProcessor implements BeanFactoryPostProcessor{
@@ -75,6 +75,7 @@ public class HandlerProcessor implements BeanFactoryPostProcessor{
 HandlerProcessor需要实现BeanFactoryPostProcessor，在spring处理bean前，将自定义的bean注册到容器中。
 核心工作已经完成，现在看看HandlerContext如何获取对应的处理器：
 HandlerContext：
+
 public class HandlerContext {
 
     private Map<String, Class> handlerMap;
